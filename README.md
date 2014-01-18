@@ -1,2 +1,1 @@
-simple_color_chooser_demo
-=========================
+This is a simple color chooser dialog for android.
