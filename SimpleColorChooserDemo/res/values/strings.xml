@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimpleColorChooserDemo</string>
+    <string name="button01">Change Color</string>
+    <string name="s_ok">OK</string>
+    <string name="s_cancel">Cancel</string>
+    
+</resources>
