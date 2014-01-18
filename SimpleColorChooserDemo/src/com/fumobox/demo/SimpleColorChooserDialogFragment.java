@@ -57,7 +57,7 @@ public class SimpleColorChooserDialogFragment extends DialogFragment {
 			setCanceledOnTouchOutside(true);
 			setContentView(this.getLayoutInflater().inflate(R.layout.color_chooser, null));
 			
-			setTitle(getArguments().getString("title"));
+			setTitle(getArguments().getInt("title"));
 			
 			_color = getArguments().getInt("color");
 			
