@@ -154,8 +154,6 @@ public class SimpleColorChooserDialogFragment extends DialogFragment {
 						_g = _r;
 						_b = _r;
 						combineColor();
-					} else {
-
 					}
 				}
 			});
