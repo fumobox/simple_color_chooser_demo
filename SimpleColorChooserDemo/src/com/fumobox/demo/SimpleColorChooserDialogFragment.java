@@ -188,7 +188,7 @@ public class SimpleColorChooserDialogFragment extends DialogFragment {
 			_sb[1].setProgress(_g);
 			_sb[2].setProgress(_b);
 			_colbox.setColor(_color);
-			_tv01.setText("#" + Integer.toHexString(_color & 0x00ffffff) + " (" + _r + ", " + _g + ", " + _b + ")");
+			_tv01.setText("#" + toHexString(_color & 0x00ffffff, 6) + " (" + _r + ", " + _g + ", " + _b + ")");
 		}
 
 		public void combineColor() {
@@ -197,9 +197,22 @@ public class SimpleColorChooserDialogFragment extends DialogFragment {
 			_color |= _g << 8;
 			_color |= _b;
 			_colbox.setColor(_color);
-			_tv01.setText("#" + Integer.toHexString(_color & 0x00ffffff) + " (" + _r + ", " + _g + ", " + _b + ")");
+			_tv01.setText("#" + toHexString(_color & 0x00ffffff, 6) + " (" + _r + ", " + _g + ", " + _b + ")");
 		}
 
+		private String toHexString(int value, int length) {
+			String str = Integer.toHexString(value);
+			if(str.length() >= length) {
+				return str;
+			} else {
+				StringBuffer sb = new StringBuffer();
+				for(int i = length - str.length(); i > 0; i--) {
+					sb.append("0");
+				}
+				return sb.toString() + str;
+			}
+		}
+		
 	}
 	
 }
